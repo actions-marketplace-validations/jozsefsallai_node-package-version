@@ -9,7 +9,7 @@ async function run(): Promise<void> {
         const packageVersion: string = await extract(path);
 
         exportVariable('PACKAGE_VERSION', packageVersion);
-    } catch (error) {
+    } catch (error: any) {
         setFailed(error.message);
     }
 }
